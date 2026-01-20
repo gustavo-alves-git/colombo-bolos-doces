@@ -119,22 +119,28 @@ const ColomboLandingPage = () => {
         </p>
       </section>
 
-      {/* Galeria Placeholder */}
+      {/* Galeria */}
       <section style={styles.galeriaSection}>
         <h2 style={styles.sectionTitle}>Nossas Delícias</h2>
         <div style={styles.divider}></div>
-        
+
         <div style={styles.galeriaGrid}>
-          {[1, 2, 3, 4, 5, 6].map((item) => (
-            <div key={item} style={styles.galeriaItem}>
-              <div style={styles.galeriaPlaceholder}>
-                <span style={styles.galeriaIcon}>📷</span>
-                <span style={styles.galeriaText}>Foto {item}</span>
-              </div>
-            </div>
-          ))}
+          <div style={styles.galeriaItem}>
+            <img src="./gallery/foto1.jpeg" alt="Delícia Colombo 1" style={styles.galeriaImg} />
+          </div>
+          <div style={styles.galeriaItem}>
+            <img src="./gallery/foto2.jpeg" alt="Delícia Colombo 2" style={styles.galeriaImg} />
+          </div>
+          <div style={styles.galeriaItem}>
+            <img src="./gallery/foto3.jpeg" alt="Delícia Colombo 3" style={styles.galeriaImg} />
+          </div>
+          <div style={styles.galeriaItem}>
+            <video style={styles.galeriaVideo} autoPlay loop muted playsInline>
+              <source src="./gallery/video1.mp4" type="video/mp4" />
+            </video>
+          </div>
         </div>
-        
+
         <a href={instagramLink} target="_blank" rel="noopener noreferrer" style={styles.instagramButton}>
           Ver mais no Instagram →
         </a>
@@ -452,28 +458,20 @@ const styles = {
     aspectRatio: '1',
     borderRadius: '15px',
     overflow: 'hidden',
+    boxShadow: '0 5px 20px rgba(106, 127, 187, 0.15)',
   },
-  
-  galeriaPlaceholder: {
+
+  galeriaImg: {
     width: '100%',
     height: '100%',
-    background: 'linear-gradient(145deg, #e0e6f5 0%, #c4cfe8 100%)',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: '10px',
-    border: '2px dashed #a8b8dc',
+    objectFit: 'cover',
+    transition: 'transform 0.3s ease',
   },
-  
-  galeriaIcon: {
-    fontSize: '30px',
-    opacity: 0.5,
-  },
-  
-  galeriaText: {
-    fontSize: '12px',
-    color: '#7a8aae',
+
+  galeriaVideo: {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
   },
   
   instagramButton: {
