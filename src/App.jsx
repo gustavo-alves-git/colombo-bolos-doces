@@ -11,7 +11,7 @@ const ColomboLandingPage = () => {
     whatsapp: "5541987189803",
     regiao: "Curitiba e Região Metropolitana",
     instagram: "bolos_colombo",
-    mensagemWhatsapp: "Olá! Vi o site da Colombo Bolos & Doces e gostaria de fazer uma encomenda! \u{1F370}"
+    mensagemWhatsapp: "Olá! Vi o site da Colombo Bolos & Doces e gostaria de fazer uma encomenda! \u2764"
   };
 
   const whatsappLink = `https://wa.me/${config.whatsapp}?text=${encodeURIComponent(config.mensagemWhatsapp)}`;
