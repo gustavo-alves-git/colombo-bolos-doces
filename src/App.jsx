@@ -11,7 +11,7 @@ const ColomboLandingPage = () => {
     whatsapp: "5541987189803",
     regiao: "Curitiba e Região Metropolitana",
     instagram: "bolos_colombo",
-    mensagemWhatsapp: "Olá! Vi o site da Colombo Bolos & Doces e gostaria de fazer uma encomenda! 🍰"
+    mensagemWhatsapp: "Olá! Vi o site da Colombo Bolos & Doces e gostaria de fazer uma encomenda! \u{1F370}"
   };
 
   const whatsappLink = `https://wa.me/${config.whatsapp}?text=${encodeURIComponent(config.mensagemWhatsapp)}`;
@@ -176,6 +176,7 @@ const ColomboLandingPage = () => {
         </div>
         <p style={styles.footerSlogan}>Feito com amor 💙</p>
         <p style={styles.footerCopy}>© 2026 Colombo Bolos & Doces. Todos os direitos reservados.</p>
+        <p style={styles.footerCredits}>Desenvolvido por <span style={styles.footerCreditsLink}>MAG.WARE</span></p>
       </footer>
     </div>
   );
@@ -578,6 +579,18 @@ const styles = {
   footerCopy: {
     fontSize: '12px',
     color: '#5b6a8a',
+  },
+
+  footerCredits: {
+    fontSize: '11px',
+    color: '#4a5568',
+    marginTop: '15px',
+  },
+
+  footerCreditsLink: {
+    color: '#7a8aae',
+    textDecoration: 'none',
+    fontWeight: '600',
   },
 };
 
